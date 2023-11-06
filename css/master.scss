@@ -1,0 +1,615 @@
+html {
+  font-size: 20px;
+}
+
+$blue: #5660FE;
+$accent: #EEEFFF;
+$beige: #F3E9DD;
+$brick: #DE9C7F;
+$grey: #808080;
+
+@import "fonts";
+@import "accordion";
+
+.color-blue {
+  color: $blue;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-accent-blue {
+  background-color: $accent;
+}
+.bg-beige {
+  background-color: #F3E9DD;
+}
+.color-grey {
+  color: $grey;
+}
+
+body {
+  color: black;
+  font-family: $font;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+.wrapper {
+  max-width: 1800px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  font: 14px/1.15em $font;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 12px 25px;
+  border-width: 2px;
+  letter-spacing: 0.14px;
+}
+
+.btn.btn-sq {
+  padding: 10px;
+}
+
+.btn-sq .arrow {
+  width: 15px;
+  height: 15px;
+}
+
+.btn-primary {
+  border-color: $blue;
+  background-color: $blue;
+  color: white;
+}
+
+.btn-white {
+  border-color: white;
+  background-color: white;
+  color: $blue;
+}
+
+.btn-ghost {
+  border-color: white;
+  background-color: transparent;
+  color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus, a:hover .btn-primary, a:focus .btn-primary  {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-ghost:hover,
+.btn-ghost:focus {
+  border-color: black;
+  background-color: black;
+  color: $blue;
+}
+
+.navbar-brand {
+  font: bold 17px/1.2em $font;
+}
+
+#navbarNav {
+  .nav-item + .nav-item {
+    border-top: 1px solid black;
+  }
+  .nav-link {
+    color: black;
+    font: 600 18px/1.2em $font;
+    letter-spacing: -0.18px;
+    padding: 1rem .75rem;
+  }
+}
+
+.navbar-nav .nav-link:hover, .nav-link:focus {
+  color: $blue;
+}
+
+@media (min-width: 1200px) {
+
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #navbarNav {
+    .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 152px;
+      &:first-of-type, &:last-of-type {
+        flex: 0 1 132px;
+      }
+      & + .nav-item {
+        border-left: 1px solid $grey;
+        border-top: none;
+      }
+    }
+    .nav-link {
+      color: black;
+      padding: 0;
+      /* padding-left:0!important;
+      padding-right:0!important; */
+      flex: 0 1 112px;
+      text-align: center;
+      font: 500 17px/1.2 $font;
+      letter-spacing: -0.255px;
+    }
+  }
+
+}
+
+.btn-arrow, .nav-btn {
+  color: white;
+  border-color: $blue;
+  border-radius: 4px;
+  padding: 12px 25px!important;
+  background: $blue;
+}
+
+.nav-btn {
+  color: white!important;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-arrow:hover, .btn-arrow:focus {
+  border-color: $blue;
+  background-color: transparent;
+}
+
+.btn-arrow.btn-white {
+  border-color: white;
+  background-color: white;
+  color: $blue;
+}
+
+.btn-arrow.btn-white:hover, .btn-arrow.btn-white:focus {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+.card {
+  border-radius: 4px;
+  border: none;
+}
+
+.card-body {
+  border-radius: 4px;
+  border: none;
+  padding: 1.5rem;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: white;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(270deg, #db9b81, $blue, #db9b81);
+  width: 0%;
+}
+
+#hero {
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  top:0;right:0;bottom:0;left:0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-content h3 {
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  font: bold 90px/1em $font;
+  letter-spacing: -0.9px;
+}
+
+.hero-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  top:0;right:0;bottom:0;left:0;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 27.23%, rgba(0, 0, 0, 0.70) 79.18%) center / cover no-repeat;
+}
+.slick-list {
+  min-height: 650px;
+  max-height: calc(100vh - 120px);
+}
+.slick-slide img {
+  /* height: 100%;
+  object-fit: cover; */
+}
+.intro-block {
+  position: relative;
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
+.signature-containers {
+  flex: 0 0 175px;
+}
+.signature-containers img {
+  width: 100%;
+}
+
+#restoringFreedomIntro {
+  position: relative;
+}
+
+video.video-bg {
+  position: absolute;
+  width: 100%;
+  top:0;right:0;left:0;bottom:0;
+  object-fit: cover;
+}
+
+.modal-content {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+.modal-header {
+  border-color: black;
+  padding: 1.5rem 1.5rem .5rem;
+}
+.btn-close {
+  color: $blue;
+  height: auto;
+  width: auto;
+}
+.modal-body {
+  padding: 1rem 4rem 4rem 4rem;
+}
+
+.story-card {
+  color: black;
+  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $brick;
+  background-blend-mode: color-burn, normal;
+  border: 1px solid $brick;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+
+.story-card.active, .story-card:hover, .story-card:focus {
+  color: $blue;
+  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $accent;
+  border-color: $accent;
+}
+
+.story-name {
+  height: 350px;
+  width: 101px;
+}
+
+.story-name h3 {
+  rotate: -90deg;
+  margin-bottom: 0;
+  white-space: nowrap;
+  translate: 0 250px;
+}
+
+.headshot {
+  height: 440px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background: url('/assets/03/Stories/Headshots/John_Galvan.png') bottom / cover no-repeat;
+}
+
+.story-card.galvan .headshot {
+  background-image: url('/assets/03/Stories/Headshots/John_Galvan.png');
+}
+.story-card.henry .headshot {
+  background-image: url('/assets/03/Stories/Headshots/Darril_Henry.png');
+}
+.story-card.williams .headshot {
+  background-image: url('/assets/03/Stories/Headshots/Herman_Williams.png');
+}
+.story-card.schweitzer .headshot {
+  background-image: url('/assets/03/Stories/Headshots/Ian_Schweitzer.png');
+}
+.story-card.peets .headshot {
+  background-image: url('/assets/03/Stories/Headshots/Norberto_Peets.png');
+}
+.story-card.day .headshot {
+  background-image: url('/assets/03/Stories/Headshots/Tyrone_Day.png');
+}
+
+#storyProfiles {
+  position: relative;
+}
+
+.story-profile {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+  .content {
+    min-height: 465px;
+    a {
+      color: black;
+      &:hover, &.focus {
+        color: black;
+      }
+    }
+  }
+}
+
+.embed-container {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;left:0;right:0;bottom:0;
+  }
+}
+
+#rememberingCalvinJohnson {
+  background: url('/assets/03/background.jpg') center/cover;
+}
+
+#rememberingCalvinJohnson > .container {
+  background: url('/assets/03/CalvinJohnson.png') bottom right/55% no-repeat;
+}
+
+.sound-bars {
+  width: 240px;
+}
+
+#stateAchievements {
+  background: $beige url('/assets/04/States/bg-overlay.jpg') top/cover no-repeat;
+  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $brick;
+  background-blend-mode: color-burn, normal;
+}
+
+.state-profile {
+  min-height: 550px;
+  display: none;
+  &.active {
+    display: block;
+  }
+  h3, h5 {
+    margin-bottom: 1.5rem;
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid $beige;
+  }
+  .state-map {
+    height: 51px;
+    width: 44px;
+    text-align: center;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.article-card {
+  background-color: $beige;
+  border-radius: 4px;
+}
+
+.article-link, .article-link:hover, .article-link:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.btn-col {
+  flex: 0 0 40px;
+}
+
+.state-nav {
+  list-style: none;
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+  padding-left: 0;
+  max-width: 100%;
+  a.nav-link {
+    font: 400 18px/1.2em $font;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      color: black;
+      font-weight: bold;
+    }
+    &:before {
+      content: "";
+      background: transparent;
+      width: 13px;
+      height: 13px;
+      margin: auto;
+      margin-bottom: 10px;
+      display: block;
+    }
+    &.active {
+      font-weight: bold;
+      &:before {
+        background: black;
+      }
+    }
+
+  }
+}
+
+#highlights a {
+  text-decoration: none;
+  &:hover, &:focus {
+    .card {
+      box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+    }
+  }
+}
+
+#financials {
+  .pie-chart {
+    width: 377px;
+  }
+  table {
+    width: 100%;
+    td {
+      padding: 0 0 10px 0;
+      &.label {
+        width: 66%;
+      }
+      &.amount {
+        width: calc(33% - 40px);
+      }
+      &.percent {
+        width: 40px
+      }
+      &.td-empty {
+        padding-bottom: 1rem;
+      }
+    }
+    th {
+      padding-top: 1.5rem;
+      &.total {
+        width: 66%;
+      }
+      &.total-amt {
+        width: 33%;
+      }
+    }
+    tr.th-row {
+      border-top: 2px solid $accent;
+    }
+  }
+}
+
+.donor-list-card {
+  background-color: white;
+  border-radius: 4px;
+  overflow-y: auto;
+  max-height: 725px;
+  padding: 40px;
+}
+
+.donor-list-card ul {
+  margin-bottom: 1.75rem;
+}
+
+.donor-list-card ul li {
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: -0.27px;
+  margin-bottom: .5rem;
+}
+
+#waysToGive {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(270deg, #000 35.94%, rgba(0, 0, 0, 0.00) 100%), url('/assets/07/ways_to_give-bg.jpg') left / cover no-repeat;
+}
+
+.give-button {
+  text-decoration: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.give-button .icon-container {
+  width: 85px;
+  height: 80px;
+  text-align: center;
+}
+
+.give-button .icon {
+  width: auto;
+  height: 100%;
+}
+
+.give-button .blue-cap {
+  border: 2px solid $blue;
+  background: $blue;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.give-button:hover .blue-cap, .give-button:focus .blue-cap {
+  border: 2px solid $blue;
+  background-color: black;
+}
+
+.give-button .arrow {
+  min-width: 40px;
+}
+
+@media (min-width: 576px) {
+
+  .state-nav {
+    grid-template: auto / repeat(4, 1fr);
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .state-nav {
+    grid-template: auto / repeat(5, 1fr);
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .state-nav {
+    grid-template: auto / repeat(7, 1fr);
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .state-nav {
+    display: flex;
+  }
+
+}

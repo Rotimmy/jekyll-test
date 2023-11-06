@@ -1,0 +1,65 @@
+<div class="">
+  {% for profile in site.state_profiles %}
+  <div id="{{ profile.abbr }}" class="state-profile {% if forloop.index == 1 %}active{% endif %}">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="profile-header pb-4">
+          <div class="state-map me-3">
+            <img src="/assets/04/States/{{ profile.map }}" alt="map">
+          </div>
+          <h6 class="state-name mb-0">{{ profile.state }}</h6>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="achievements pt-4 mb-4">
+          {{ profile.content }}
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="news-articles pt-4">
+          {% if profile.a1_headline %}
+          <div class="article-card p-3 mb-4">
+            <a class="article-link" href="{{ profile.a1_url }}" target="_blank">
+              <div class="d-flex">
+                <div class="pe-3">
+                  <h6>{{ profile.a1_source }}</h6>
+                  <div class="">
+                    {{ profile.a1_headline }}
+                  </div>
+                </div>
+                <div class="btn-col d-flex align-items-end">
+                  <div class="btn btn-primary btn-sq">
+                    <img class="arrow" src="/assets/graphics/To-Down.svg" alt="arrow">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          {% if profile.a2_headline %}
+          <div class="article-card p-3 mb-4">
+            <a class="article-link" href="{{ profile.a2_url }}" target="_blank">
+              <div class="d-flex justify-content-between">
+                <div class="pe-3">
+                  <h6>{{ profile.a2_source }}</h6>
+                  <div class="">
+                    {{ profile.a2_headline }}
+                  </div>
+                </div>
+                <div class="btn-col d-flex align-items-end">
+                  <div class="btn btn-primary btn-sq">
+                    <img class="arrow" src="/assets/graphics/To-Down.svg" alt="arrow">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

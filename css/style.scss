@@ -1,0 +1,11 @@
+.profile {
+  min-height: 500px;
+  .profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #F3E9DD;
+  }
+  h3 {
+    margin-bottom: 3.5rem;
+  }
+}
