@@ -297,7 +297,7 @@ video.video-bg {
 
 .story-card {
   color: black;
-  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $brick;
+  background: url('../assets/04/States/bg-overlay.jpg') center/cover, $brick;
   background-blend-mode: color-burn, normal;
   border: 1px solid $brick;
   border-top: none;
@@ -311,7 +311,7 @@ video.video-bg {
 
 .story-card.active, .story-card:hover, .story-card:focus {
   color: $blue;
-  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $accent;
+  background: url('../assets/04/States/bg-overlay.jpg') center/cover, $accent;
   border-color: $accent;
 }
 
@@ -332,26 +332,26 @@ video.video-bg {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background: url('/assets/03/Stories/Headshots/John_Galvan.png') bottom / cover no-repeat;
+  background: url('../assets/03/Stories/Headshots/John_Galvan.png') bottom / cover no-repeat;
 }
 
 .story-card.galvan .headshot {
-  background-image: url('/assets/03/Stories/Headshots/John_Galvan.png');
+  background-image: url('../assets/03/Stories/Headshots/John_Galvan.png');
 }
 .story-card.henry .headshot {
-  background-image: url('/assets/03/Stories/Headshots/Darril_Henry.png');
+  background-image: url('../assets/03/Stories/Headshots/Darril_Henry.png');
 }
 .story-card.williams .headshot {
-  background-image: url('/assets/03/Stories/Headshots/Herman_Williams.png');
+  background-image: url('../assets/03/Stories/Headshots/Herman_Williams.png');
 }
 .story-card.schweitzer .headshot {
-  background-image: url('/assets/03/Stories/Headshots/Ian_Schweitzer.png');
+  background-image: url('../assets/03/Stories/Headshots/Ian_Schweitzer.png');
 }
 .story-card.peets .headshot {
-  background-image: url('/assets/03/Stories/Headshots/Norberto_Peets.png');
+  background-image: url('../assets/03/Stories/Headshots/Norberto_Peets.png');
 }
 .story-card.day .headshot {
-  background-image: url('/assets/03/Stories/Headshots/Tyrone_Day.png');
+  background-image: url('../assets/03/Stories/Headshots/Tyrone_Day.png');
 }
 
 #storyProfiles {
@@ -391,11 +391,11 @@ video.video-bg {
 }
 
 #rememberingCalvinJohnson {
-  background: url('/assets/03/background.jpg') center/cover;
+  background: url('../assets/03/background.jpg') center/cover;
 }
 
 #rememberingCalvinJohnson > .container {
-  background: url('/assets/03/CalvinJohnson.png') bottom right/55% no-repeat;
+  background: url('../assets/03/CalvinJohnson.png') bottom right/55% no-repeat;
 }
 
 .sound-bars {
@@ -403,8 +403,8 @@ video.video-bg {
 }
 
 #stateAchievements {
-  background: $beige url('/assets/04/States/bg-overlay.jpg') top/cover no-repeat;
-  background: url('/assets/04/States/bg-overlay.jpg') center/cover, $brick;
+  background: $beige url('../assets/04/States/bg-overlay.jpg') top/cover no-repeat;
+  background: url('../assets/04/States/bg-overlay.jpg') center/cover, $brick;
   background-blend-mode: color-burn, normal;
 }
 
@@ -546,7 +546,7 @@ video.video-bg {
 }
 
 #waysToGive {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(270deg, #000 35.94%, rgba(0, 0, 0, 0.00) 100%), url('/assets/07/ways_to_give-bg.jpg') left / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(270deg, #000 35.94%, rgba(0, 0, 0, 0.00) 100%), url('../assets/07/ways_to_give-bg.jpg') left / cover no-repeat;
 }
 
 .give-button {
